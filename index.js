@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import inquirer from "inquirer";
 const answer = await inquirer.prompt([
     { message: "Enter Your First Number", type: "number", name: "firstNumber" },
@@ -22,5 +23,6 @@ else if (answer.operation === "Multiplication") {
 else if (answer.operation === "Division") {
     console.log(answer.firstNumber / answer.secondNumber);
 }
-else
+else {
     console.log("Plz Select A Valid Operation");
+}
